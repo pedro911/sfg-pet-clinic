@@ -14,5 +14,6 @@
 
 By: Pedro Henrique Marangoni
 pedro911@gmail.com
+Sep 2019
 
 http://patorjk.com/software/taag
