@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 
+
 @Component
 public class DataLoader implements CommandLineRunner {
 
@@ -44,7 +45,7 @@ public class DataLoader implements CommandLineRunner {
         PetType savedDogPetType = petTypeService.save(dog);
 
         PetType cat = new PetType();
-        dog.setName("Cat");
+        cat.setName("Cat");
         PetType savedCatPetType = petTypeService.save(cat);
 
         Specialty radiology = new Specialty();
@@ -78,9 +79,12 @@ public class DataLoader implements CommandLineRunner {
         Owner owner2 = new Owner();
         owner2.setFirstName("Fiona");
         owner2.setLastName("Glenanne");
-        owner1.setAddress("456 Brickerrel");
-        owner1.setCity("New York");
-        owner1.setTelephone("1234234234");
+        owner2.setAddress("456 Brickerrel");
+        owner2.setCity("New York");
+        owner2.setTelephone("1234234234");
+
+        // we can create object with build :)
+        //Owner.builder().address("AAADF").id(3).firstName("First Name").build();
 
         Pet fionasCat = new Pet();
         fionasCat.setName("Just Cat");
@@ -98,7 +102,6 @@ public class DataLoader implements CommandLineRunner {
         visitService.save(catVisit);
 
         System.out.println("Loaded owners....");
-
 
         Vet vet1 = new Vet();
         vet1.setFirstName("Sam");
